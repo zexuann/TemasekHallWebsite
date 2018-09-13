@@ -1,0 +1,2 @@
+- Updated contact details in footer with Residential Life (Student Activities) and Housing Services (Operational and Guestroom)
+- Removed sentence 'If the system shows error or unsuccessful payment, please send us an email at tehsec@nus.edu.sg.' in FAQs.html

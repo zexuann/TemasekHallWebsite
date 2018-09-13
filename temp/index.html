@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<h1>Residents List</h1>
+	<script src="ejs.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	
+	<script>
+		$(document).ready(function(){
+			$.get("residents-list.ejs", function(template){
+				console.log(template)
+				$.ajax("residents.json", {
+					success: function(residents){
+						console.log(residents)
+						var html = ejs.render(template, {appTitle: "Temasek Net", residents: residents})
+						console.log(html)
+						$("body").append(html)
+					},
+					error: function(err){
+						console.log(err)
+					}
+				})
+			})
+		});
+	</script>
+</body>
+</html>
